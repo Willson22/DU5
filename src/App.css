@@ -1,0 +1,303 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+.light {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-background: #f8f9fa;
+  --modal-background: #ffffff;
+  --button-outline-bg: #ffffff;
+  --button-outline-color: #000000;
+}
+
+/* Dark Theme */
+.dark {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background: #1e1e1e;
+  --modal-background: #2a2a2a;
+  --button-outline-bg: #1e1e1e;
+  --button-outline-color: #ffffff;
+}
+
+/* Buttons */
+.button {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.button-primary {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.button-primary:hover {
+  background-color: #0056b3;
+}
+
+.button-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.button-secondary:hover {
+  background-color: #5a6268;
+}
+
+.button-outline {
+  background-color: var(--button-outline-bg);
+  color: var(--button-outline-color);
+  border: 1px solid var(--button-outline-color);
+}
+
+.button-outline:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.button-danger {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.button-danger:hover {
+  background-color: #a71d2a;
+}
+
+.button-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.2s ease;
+}
+
+.button-icon:hover {
+  color: #ef4444;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--modal-background);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-row {
+  display: flex;
+  width: 100%;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Shopping List Cards */
+.list-card {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.list-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.list-card .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Archived Tag */
+.archived-tag {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+/* Utility Classes */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.items {
+  margin-bottom: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.resolved {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* List Grid */
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Language Select and Theme Toggle */
+.language-select,
+.theme-toggle {
+  flex: 0 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .button {
+    max-width: 100%;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}
+
